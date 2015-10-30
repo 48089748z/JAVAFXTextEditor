@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainStage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="Fopen" mnemonicParsing="false" onAction="#open" text="Open File" />
+                  <MenuItem fx:id="Fsave" mnemonicParsing="false" onAction="#save" text="Save File" />
+              <MenuItem fx:id="Fsortir" mnemonicParsing="false" onAction="#sortir" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onShowing="#deshabilitar" text="Editar">
+            <items>
+              <MenuItem fx:id="Ecopiar" mnemonicParsing="false" onAction="#copiar" text="Copy" />
+              <MenuItem fx:id="Eenganxar" mnemonicParsing="false" onAction="#enganxar" text="Paste" />
+              <MenuItem fx:id="Etallar" mnemonicParsing="false" onAction="#tallar" text="Cut" />
+              <MenuItem fx:id="Edesfer" mnemonicParsing="false" onAction="#desfer" text="Undo" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Opcions">
+               <items>
+                  <Menu mnemonicParsing="false" text="Size">
+                    <items>
+                        <MenuItem fx:id="zoomIn" mnemonicParsing="false" onAction="#zoomInTamany" text="Zoom In" />
+                      <MenuItem fx:id="zoomOut" mnemonicParsing="false" onAction="#zoomOutTamany" text="Zoom Out" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Font">
+                    <items>
+                        <CheckMenuItem fx:id="arial" mnemonicParsing="false" onAction="#fontArial" text="Arial" />
+                        <CheckMenuItem fx:id="arialBlack" mnemonicParsing="false" onAction="#fontArialBlack" text="Arial Black" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Colour">
+                    <items>
+                      <MenuItem fx:id="red" mnemonicParsing="false" onAction="#setRed" text="Red" />
+                        <MenuItem fx:id="green" mnemonicParsing="false" onAction="#setGreen" text="Green" />
+                        <MenuItem fx:id="blue" mnemonicParsing="false" onAction="#setBlue" text="Blue" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="Aajuda" mnemonicParsing="false" onAction="#help" text="Help" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="texto" layoutY="123.0" prefHeight="282.0" prefWidth="600.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="123.0" />
+      <ToolBar fx:id="toolbar" layoutX="-1.0" layoutY="29.0" prefHeight="38.0" prefWidth="600.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+        <items>
+          <Button fx:id="btcopy" mnemonicParsing="false" onAction="#copiar" text="Copy" />
+            <Button fx:id="btpaste" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enganxar" text="Paste" />
+            <Button fx:id="btcut" mnemonicParsing="false" onAction="#copiar" text="Cut" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
